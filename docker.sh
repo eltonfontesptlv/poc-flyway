@@ -7,4 +7,4 @@ docker run --name=migrations --rm \
     -v $PWD/sql/migrations:/flyway/sql \
     -v $PWD/conf:/flyway/conf \
     -v $PWD/certs:/flyway/certs \
-    flyway/flyway migrate
+    flyway/flyway -q migrate

@@ -10,7 +10,7 @@ services:
       - FLYWAY_BASELINEONMIGRATE=${FLYWAY_BASELINEONMIGRATE}
       - FLYWAY_USER=${FLYWAY_USER}
       - FLYWAY_PASS=${FLYWAY_PASS}
-    command: -url="${FLYWAY_URL}?disableSslHostnameVerification=${DB_USE_SSL}&verifyServerCertificate=${DB_USE_SSL}&useSSL=${DB_USE_SSL}&requireSSL=${DB_USE_SSL}&clientCertificateKeyStoreUrl=file:${DB_KEYSTORE_PATH}&clientCertificateKeyStorePassword=${DB_KEYSTORE_PASSWORD}&trustCertificateKeyStoreUrl=file:${DB_TRUSTSTORE_PATH}&trustCertificateKeyStorePassword=${DB_TRUSTSTORE_PASSWORD}" -user=${FLYWAY_USER} -password=${FLYWAY_PASS} -connectRetries=60 migrate
+    command: -url="${FLYWAY_URL}?disableSslHostnameVerification=${DB_USE_SSL}&verifyServerCertificate=${DB_USE_SSL}&useSSL=${DB_USE_SSL}&requireSSL=${DB_USE_SSL}&clientCertificateKeyStoreUrl=file:${DB_KEYSTORE_PATH}&clientCertificateKeyStorePassword=${DB_KEYSTORE_PASSWORD}&trustCertificateKeyStoreUrl=file:${DB_TRUSTSTORE_PATH}&trustCertificateKeyStorePassword=${DB_TRUSTSTORE_PASSWORD}" -user=${FLYWAY_USER} -password=${FLYWAY_PASS} -connectRetries=60 -q migrate
     volumes:
       - "./sql/migrations:/flyway/sql"
       - "./conf:/flyway/conf"

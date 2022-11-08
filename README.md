@@ -5,7 +5,7 @@ POC to independently secure migrations
 
 ## Environment variables
 
-To run this project, you will need to add the following environment variables to your application.yml
+To run this project you need to create a .env configuration file by adding/filling in the variables below
 
 ```bash
 FLYWAY_DRIVE
